@@ -5,11 +5,11 @@ import { join } from "node:path";
  * Single-sentence startup pitch (<= 200 UTF-8 characters) for
  * "Ridiculous at First Glance, Real by the Second".
  *
- * Champion pitch selected via 8-candidate blind 3-round Swiss tournament,
- * Top-3 playoff, and surgical wording shootout.
+ * Round 2 champion pitch selected via 20-candidate multi-panel blind
+ * two-order tournaments and Generation-3 evolutionary refinement.
  */
 const PITCH: string =
-  "We lease cruise lines and resorts $1/day butt-sensing loungers that pop up a glowing 'ABANDONED' flag after an hour of towel-only weight, ending 6 AM chair-hog wars and boosting poolside bar tabs.";
+  "We hold $150 parent 'shut-up bonds' that wire $50 to the rival team's pizza fund per video-verified tirade, so youth leagues pay us $5/player to keep teen refs from quitting.";
 
 function validatePitch(text: string): void {
   const trimmed = text.trim();
