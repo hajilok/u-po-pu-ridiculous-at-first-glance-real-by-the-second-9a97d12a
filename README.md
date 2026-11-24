@@ -8,11 +8,11 @@ Entry for the [make.fun](https://make.fun/r/41fw6r6c) competition **Ridiculous a
 
 ## Overview
 
-`main.ts` writes a deterministic, UTF-8, single-sentence startup pitch (≤ 200 characters) to `/output/entry.txt` (or `$OUTPUT_DIR/entry.txt` for local testing), validating length, whitespace, and encoding before exiting cleanly.
+`main.ts` writes a deterministic, UTF-8, single-sentence startup pitch (<= 200 characters) to `/output/entry.txt` (or an optional output directory argument for local testing), validating length, whitespace, and encoding before exiting cleanly.
 
 ## Run Locally
 
 ```bash
-OUTPUT_DIR=/tmp/out node main.ts
+node main.ts /tmp/out
 cat /tmp/out/entry.txt
 ```

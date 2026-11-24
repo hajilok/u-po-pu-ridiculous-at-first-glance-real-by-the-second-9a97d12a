@@ -5,11 +5,11 @@ import { join } from "node:path";
  * Single-sentence startup pitch (<= 200 UTF-8 characters) for
  * "Ridiculous at First Glance, Real by the Second".
  *
- * Initial scaffold draft — will be replaced by the champion pitch selected via
- * blind pairwise tournament evaluation.
+ * Champion pitch selected via 8-candidate blind 3-round Swiss tournament,
+ * Top-3 playoff, and surgical wording shootout.
  */
 const PITCH: string =
-  "A subscription that mails luxury hotels realistic fake luggage tags for guests' forgotten chargers, turning lost-and-found storage fees into branded recovery upsells.";
+  "We lease cruise lines and resorts $1/day butt-sensing loungers that pop up a glowing 'ABANDONED' flag after an hour of towel-only weight, ending 6 AM chair-hog wars and boosting poolside bar tabs.";
 
 function validatePitch(text: string): void {
   const trimmed = text.trim();
@@ -34,7 +34,7 @@ function validatePitch(text: string): void {
 
 function main(): void {
   validatePitch(PITCH);
-  const outputDir = process.env.OUTPUT_DIR ?? "/output";
+  const outputDir = process.argv[2] ?? "/output";
   mkdirSync(outputDir, { recursive: true, mode: 0o755 });
   const outputPath = join(outputDir, "entry.txt");
   writeFileSync(outputPath, PITCH, { encoding: "utf8", mode: 0o644 });
